@@ -14,7 +14,7 @@ function setup() {
   drawBoard();
   btn=createButton("RESET");
   btn.mousePressed(reset);
-  btn.position(windowWidth/2-25,windowHeight-100);
+  btn.position(windowWidth/2-25,windowHeight/2+width/2+20);
   for(let i=1;i<=3;i++)
     for(let j=1;j<=3;j++)
   {
