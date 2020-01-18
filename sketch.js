@@ -8,7 +8,7 @@ let winner,tie;
 let banner;
 function setup() {
   rectMode(CENTER);
-  let cnv=createCanvas(300, 300);
+  let cnv=createCanvas(windowWidth/4, windowWidth/4);
   cnv.position(window.innerWidth/2-width/2,window.innerHeight/2-height/2);
   background(0);
   drawBoard();
