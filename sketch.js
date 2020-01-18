@@ -5,7 +5,7 @@ let ind=[];
 let btn;
 let p2;
 let winner,tie;
-let banner;
+let banner,h1;
 function setup() {
   rectMode(CENTER);
   let cnv=createCanvas(windowWidth/4, windowWidth/4);
@@ -21,6 +21,12 @@ function setup() {
     cells[i-1][j-1]=new Cell(i,j);
   }
   turn=floor(random(2));
+
+  h1=createElement('h1',"");
+  h1.html("TIC TAC TOE");
+  h1.style('text-align','center');
+  h1.style('margin','10px');
+  h1.style('font-size','55px');
   p2=createElement('h1',"");
   banner=createElement('h1',"");
 }
@@ -203,7 +209,7 @@ function won()
   banner.style('text-align','center');
   p2.style('font-size','35');
   banner.style('color','#413EF9');
-  banner.style('margin-bottom','15px');
+  banner.style('margin','25px');
 }
 function tied()
 {
@@ -211,7 +217,7 @@ function tied()
   p2.style('text-align','center');
   p2.style('font-size','35');
   p2.style('color','#DB3434');
-  p2.style('margin-bottom','25px');
+  p2.style('margin','25px');
 }
 function reset()
 {
