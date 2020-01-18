@@ -1,0 +1,24 @@
+html, body {
+	background-image: url(bg.jpg);
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+}
+canvas {
+  display: block;
+}
+#head
+{
+	text-align: center;
+	margin-top: 20px;
+	font-size: 55px;
+}
+.wnr{
+	color:light-blue;
+	padding: 10px;
+}
+.tie{
+	color:light-red;
+	padding: 10px;
+}
+
