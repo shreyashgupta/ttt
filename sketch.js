@@ -5,28 +5,27 @@ let ind=[];
 let btn;
 let p2;
 let winner,tie;
-let banner,h1;
+let banner;
+let head;
 function setup() {
   rectMode(CENTER);
-  let cnv=createCanvas(windowWidth/4, windowWidth/4);
-  cnv.position(window.innerWidth/2-width/2,window.innerHeight/2-height/2);
+  let cnv=createCanvas(300, 300);
+  cnv.position(window.innerWidth/2-width/2,window.height/2);
   background(0);
   drawBoard();
   btn=createButton("RESET");
   btn.mousePressed(reset);
-  btn.position(windowWidth/2-25,windowHeight/2+width/2+20);
+  btn.position(windowWidth/2-25,window.height/2+width+50);
   for(let i=1;i<=3;i++)
     for(let j=1;j<=3;j++)
   {
     cells[i-1][j-1]=new Cell(i,j);
   }
   turn=floor(random(2));
-
-  h1=createElement('h1',"");
-  h1.html("TIC TAC TOE");
-  h1.style('text-align','center');
-  h1.style('margin','10px');
-  h1.style('font-size','55px');
+  head=createElement('h1',"TIC TAC TOE");
+  head.style("text-align",'center');
+  head.style("font-size",'55px');
+  head.style("margin",'10px');
   p2=createElement('h1',"");
   banner=createElement('h1',"");
 }
@@ -209,7 +208,7 @@ function won()
   banner.style('text-align','center');
   p2.style('font-size','35');
   banner.style('color','#413EF9');
-  banner.style('margin','25px');
+  banner.style('margin-bottom','15px');
 }
 function tied()
 {
@@ -217,7 +216,7 @@ function tied()
   p2.style('text-align','center');
   p2.style('font-size','35');
   p2.style('color','#DB3434');
-  p2.style('margin','25px');
+  p2.style('margin-bottom','25px');
 }
 function reset()
 {
