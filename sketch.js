@@ -56,10 +56,17 @@ function mousePressed()
   checkWithin();
   var i=ind[0];
   var j=ind[1];
+    if(i==3 ||j==3)
+    {
+      return;
+    }
+    else
+    {
   if(cells[i][j].item==null)
   {
     cells[i][j].takeTurn();
-  }
+  
+  }}
   }
 }
 function checkWithin()
@@ -199,6 +206,7 @@ function won()
   p2.style('font-size','35');
   banner.style('color','#413EF9');
   banner.style('margin-bottom','15px');
+  winner=true;
 }
 function tied()
 {
@@ -207,15 +215,19 @@ function tied()
   p2.style('font-size','35');
   p2.style('color','#DB3434');
   p2.style('margin-bottom','25px');
+  tie=true;
 }
 function reset()
 {
+  winner=true;
   cells=[[],[],[]];
   for(let i=1;i<=3;i++)
     for(let j=1;j<=3;j++)
   {
     cells[i-1][j-1]=new Cell(i,j);
   }
+  winner=false;
+  tie=false;
   turn=floor(random(2));
   background(0);
   drawBoard();
