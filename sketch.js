@@ -66,18 +66,8 @@ function checkWithin()
 {
   var w=width/3;
   var h=height/3;
-  for(let i=0;i<3;i++)
-    for(let j=0;j<3;j++)
-  {
-    if(mouseX>(cells[i][j].x-w/2) &&
-        mouseX<(cells[i][j].x+w/2) &&
-          mouseY>(cells[i][j].y-w/2) && mouseY<(cells[i][j].y+w/2))
-    {
-     ind[0]=i;
-      ind[1]=j;
-      return;
-    }
-  }  
+  ind[0]=floor(mouseX/w);
+  ind[1]=floor(mouseY/h);
 }
 function drawBoard()
 {
