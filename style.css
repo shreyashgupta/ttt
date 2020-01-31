@@ -1,4 +1,4 @@
-html { 
+html, body {
   background: url(bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -8,18 +8,3 @@ html {
 canvas {
   display: block;
 }
-#head
-{
-	text-align: center;
-	margin: 20px;
-	font-size: 55px;
-}
-.wnr{
-	color:light-blue;
-	padding: 10px;
-}
-.tie{
-	color:light-red;
-	padding: 10px;
-}
-
