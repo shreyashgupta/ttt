@@ -67,11 +67,14 @@ function reset() {
     for (let j = 1; j <= 3; j++) {
       cells[i - 1][j - 1] = new Cell(i, j);
     }
-  turn = floor(random(2));
+   turn =floor(random(2));
   background(0);
   drawBoard();
   banner.html("");
   p2.html("");
+ 
   winner = false;
+  tie=false;
+
   loop();
 }
