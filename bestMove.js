@@ -18,7 +18,6 @@ function ai() {
       }
     }
   }
-
   if (cells[move[0]][move[1]].item == -1)
     cells[move[0]][move[1]].takeTurn();
   else
