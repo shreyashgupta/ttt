@@ -28,16 +28,16 @@ function setup() {
       cells[i - 1][j - 1] = new Cell(i, j);
     }
   turn = floor(random(2));
-  if(turn)
-  {
-    ai();
-  }
   head = createElement('h1', "TIC TAC TOE");
   head.style("text-align", 'center');
   head.style("font-size", '55px');
   head.style("margin", '10px');
   p2 = createElement('h1', "");
   banner = createElement('h1', "");
+  if(turn)
+  {
+    ai();
+  }
 }
 
 function draw() {
@@ -71,10 +71,7 @@ function reset() {
       cells[i - 1][j - 1] = new Cell(i, j);
     }
    turn =floor(random(2));
-   if(turn)
-   {
-    ai();
-   }
+
   background(0);
   drawBoard();
   banner.html("");
@@ -82,6 +79,7 @@ function reset() {
  
   winner = false;
   tie=false;
-
+   if(turn)
+    ai();
   loop();
 }
